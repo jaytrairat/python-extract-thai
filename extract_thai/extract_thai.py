@@ -22,7 +22,8 @@ def extractThai(input_folder):
 
     with open(
         os.path.join(
-            ".", f"""{datetime.now().strftime("%Y-%m-%d_%H_%M_%S")}_extracted_result.txt"""
+            ".",
+            f"""{datetime.now().strftime("%Y-%m-%d_%H_%M_%S")}_extracted_result.txt""",
         ),
         "w",
         encoding="utf-8",
@@ -30,7 +31,7 @@ def extractThai(input_folder):
         writer.writelines("\n".join(account))
 
 
-if __name__ == "__main__":
+def main():
     try:
         parser = argparse.ArgumentParser(description="Extract thai")
         parser.add_argument(
